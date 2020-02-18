@@ -25,3 +25,6 @@
 [submodule "referto/nginx-rtmp-module"]
 	path = referto/nginx-rtmp-module
 	url = https://github.com/arut/nginx-rtmp-module.git
+[submodule "referto/nginx-lua-module"]
+	path = referto/nginx-lua-module
+	url = https://github.com/openresty/lua-nginx-module.git
