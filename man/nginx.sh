@@ -18,6 +18,9 @@ nginx -g "pid /var/run/nginx.pid; worker_processes `sysctl -n hw.ncpu`;"
 #  -v — print nginx version.
 #  -V — print nginx version, compiler version, and configure parameters.
 
+# news release
+open http://hg.nginx.org/nginx/
+
 # doc
 open http://nginx.org/en/docs/
 # HTTPS servers
@@ -35,19 +38,21 @@ open http://nginx.org/en/docs/switches.html
 # download
 open https://nginx.org/download/
 
-
 # NGINX Ingress Controller for Kubernetes
 open https://github.com/sous-chefs/nginx
 # NGINX-based Media Streaming Server
 open https://github.com/arut/nginx-rtmp-module
 
-open http://hg.nginx.org/nginx/
 # cookbook
-https://github.com/openresty/nginx-tutorials
+open https://github.com/openresty/nginx-tutorials
+open http://openresty.org/download/agentzh-nginx-tutorials-en.html
+open http://blog.sina.com.cn/openresty
+
+# kubernetes
 open https://github.com/kubernetes/ingress-nginx
+
 # Automated nginx proxy for Docker containers using docker-gen
 open https://github.com/jwilder/nginx-proxy
-
 
 # lua
 open https://github.com/openresty/lua-nginx-module
