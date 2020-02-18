@@ -1,0 +1,45 @@
+ngx_http_simple_example
+=======================
+
+A simple handler example module for nginx.
+
+1) Compiling
+As usually, compile nginx with --add-module option:
+
+	./configure --add-module=/path/to/ngx_http_simple_module
+
+2) Configuring
+Two directives are supported
+
+	* simple_example
+		Activates the module in a given location context.
+
+	* simple_example_content
+		Setup a HTML response content
+
+	* simple_example_last_modified
+		Turns on or off Last-Modified response header.
+
+	Example 1:
+
+	location /simple {
+		simple_example;
+	}
+
+	Example 2:
+
+	location /same {
+		simple_example;
+		simple_example_content "<html><body><h1>Always same content</h1></body></html>"
+	}
+
+	Example 3:
+
+	location /foo {
+		simple_example;
+		simple_example_last_modified on;
+	}	
+
+3) End note
+Be aware that this module doesn't check If-Modified-Since request header,
+so it will never generate response with HTTP status code 304. 
