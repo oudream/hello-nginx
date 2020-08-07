@@ -1,0 +1,3 @@
+#!/bin/sh
+echo record-c $@ >> $TRACE_LOG
+exec gcc $@
