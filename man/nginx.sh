@@ -3,6 +3,14 @@
 # news release
 open http://hg.nginx.org/nginx/
 open http://nginx.org/en/docs/
+# Nginx：基本配置和日志处理
+# https://www.cnblogs.com/Dy1an/p/11232207.html
+# Nginx：rewrite / if / return / set 和变量
+# https://www.cnblogs.com/Dy1an/p/11240223.html
+# Nginx：location / root / alias
+# https://www.cnblogs.com/Dy1an/p/11234740.html
+# Nginx：TCP / 正向 / 反向代理 / 负载均衡
+# https://www.cnblogs.com/Dy1an/p/11246021.html
 
 
 # 查看安装了哪些模块,输出 NGINX 各文件夹的路径
@@ -14,6 +22,19 @@ http://nginx.org/download/nginx-1.16.1.zip
 git clone https://github.com/oudream/nginx-v1.9.7
 # config
 ./conf/nginx.conf # 默认配置
+
+
+# centos
+sudo yum install epel-release
+sudo yum install nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
+# 如果你的服务器开启了防火墙，则需要同时打开 80（HTTP）和 443（HTTPS）端口
+# 通过下面的命令来打开这两个端口：
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload
 
 
 # ubuntu
